@@ -11,18 +11,21 @@ h1 {
 }
 
 
-p {
-    font-size: 1.2em;
-    padding-bottom: 10px;
-}
 
-.whiteBox {
+
+section {
     background-color: #ffffff;
     border-style: ridge;
     border-width: 2px;
-    float: left;
-    padding: 15px;
+    margin: 0 auto;
     width: 60%;
     max-width: 60%;
-    word-wrap: break-word;
+    min-height: 600px;
+    padding: 15px;
+    text-align: center;
 }
+
+#finished {
+    margin-top: 20px;
+}
+

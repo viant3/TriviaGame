@@ -1,27 +1,60 @@
-   <!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="en-us">
 
-  <head>
+<head>
 
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <title>Basic Trivia Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-   
-    <title>Trivia Game</title>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div id="trivia-div"></div>
+   <section>
 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <h1>Trivia Quiz</h1>
 
-    <!-- Script -->
-    <script src="assets/javascript/app.js"></script>
+                        <!-- div to hide questions on completion -->
+                        
+                        <div id="hideMe">
+                    
+                                    <div id="time-left"></div>
 
-  </body>
+
+                                    <div id="q1"></div>
+                                    <div id="a1"></div>
+
+                                    <div id="q2"></div>
+                                    <div id="a2"></div>
+
+                                    <div id="q3"></div>
+                                    <div id="a3"></div>
+
+                                    <div id="q4"></div>
+                                    <div id="a4"></div>
+
+                                    <div id="q5"></div>
+                                    <div id="a5"></div>
+                                    
+                                    <div id="finished"></div>
+
+                        </div>
+
+            <!-- Results -->
+            <div id="results"></div>
+            <div id="correct"></div>
+            <div id="incorrect"></div>
+            <div id="unanswered"></div>
+
+        
+        <button id="start" class="btn">BEGIN</button>
+   </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
 
 </html>
