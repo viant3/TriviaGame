@@ -195,7 +195,7 @@ function keepScore() {
         correctAnswers++;
     }
     else {
-        incorrectAnswers++;
+        incorrect++;
     }
 
 }
