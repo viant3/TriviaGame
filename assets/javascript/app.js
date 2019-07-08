@@ -37,7 +37,7 @@ $("#start").on("click", function() {
     $(this).hide();
 
     // Display initial time countdown
-    $("#time-left").html("<h2>Time Remaining: 30 Seconds</h2>" + "<br>");
+    $("#time-left").html("<h2>Time Remaining:<br> 30 <br>Seconds</h2>" + "<br>");
 
     // Start timer countdown
     runTimer();
@@ -105,7 +105,7 @@ function decrement() {
     number--;
 
     //  Show the number in the #time tag
-    $("#time-left").html("<h2>Time Remaining: " + number + " Seconds</h2>" + "<br>");
+    $("#time-left").html("<h2>Time Remaining:<br>" + number + "<br> Seconds</h2>" + "<br>");
 
     if (number === 0) {
 
@@ -143,7 +143,7 @@ function keepScore() {
     var guess5 = $("input[name='a5']:checked").val();
 
     // first question
-    if (guess1 === undefined) {
+    if (!guess1) {
         unanswered++;
     }
     else if (guess1 == trivQuest[0].answer) {
@@ -155,7 +155,7 @@ function keepScore() {
 
 
     // second question
-    if (guess2 === undefined) {
+    if (!guess2) {
         unanswered++;
     }
     else if (guess2 == trivQuest[1].answer) {
@@ -166,7 +166,7 @@ function keepScore() {
     }
 
     // third question
-    if (guess3 === undefined) {
+    if (!guess3) {
         unanswered++;
     }
     else if (guess3 == trivQuest[2].answer) {
@@ -177,7 +177,7 @@ function keepScore() {
     }
 
     // fourth question
-    if (guess4 === undefined) {
+    if (!guess4) {
         unanswered++;
     }
     else if (guess4 == trivQuest[3].answer) {
@@ -188,7 +188,7 @@ function keepScore() {
     }
 
     // fifth question
-    if (guess5 === undefined) {
+    if (!guess5) {
         unanswered++;
     }
     else if (guess5 == trivQuest[4].answer) {
