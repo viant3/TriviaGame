@@ -8,8 +8,8 @@ var unanswered = 0;
 
 // array to hold trivia questions, choices, and the correct choice
 var trivQuest = [{
-    question: "q1",
-    choices: ["a1", "a2", "a3"],
+    question: "why does Bruno bark so much?",
+    choices: ["a1", "cause he's a boy", "a3"],
     answer: 1
 },
 {
