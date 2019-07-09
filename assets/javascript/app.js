@@ -35,6 +35,7 @@ var trivQuest = [{
 //start game and timer
 $("#start").on("click", function() {
     $(this).hide();
+    $("#chuckFacts").hide();
 
     // Display initial time countdown
     $("#time-left").html("<h2>Time Remaining:<br> 30 <br>Seconds</h2>" + "<br>");
