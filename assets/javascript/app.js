@@ -7,18 +7,18 @@ var incorrect = 0;
 var unanswered = 0;
 
 var trivQuest = [{
-    question: "why does Bruno bark so much?",
-    choices: ["a1", "cause he's a boy", "a3"],
+    question: "Which world leader \ famous actor helped bring about the fall of communism?",
+    choices: ["Mikhail Gorbachev", "Ronald Reagan", "Chuck Norris"],
+    answer: 2
+},
+{
+    question: "Who invented the Internet?",
+    choices: ["Tim Berners-Lee ", "Chuck Norris", "Al Gore"],
     answer: 1
 },
 {
-    question: "q2",
-    choices: ["a1", "a2", "a3"],
-    answer: 0
-},
-{
-    question: "q3",
-    choices: ["a1", "a2", "a3"],
+    question: "Who actually stopped the 1988 Christmas Eve terrorist attack on Nakatomi Plaza?",
+    choices: ["Sgt. Al Powell", "John McClane ", "Chuck Norris"],
     answer: 2
 },
 {
@@ -79,7 +79,7 @@ $("#start").on("click", function() {
     );
    
 
-    // finished button
+    
     $("#finished").html("<button id='finished' class='btn'>FINISHED</button>");
 
     // Click event run keepScore() and displayResults() when user clicks finished 
@@ -124,6 +124,18 @@ function stop() {
     clearInterval(intervalId);
 }
 
+function displayChuck(){
+    if(correct >= 3) {
+        $("#theMyth").html("<img src='assets/images/chuckApproves.gif'>");
+        $("#chucksChoice").html("NICE JOB!");
+    }
+    else {
+        $("#theMyth").html("<img src='assets/images/chucksMad.gif'>");
+        $("#chucksChoice").html("ARE YOU KIDDING?");
+    }
+    
+}
+
 
 function displayResults() {
 
@@ -131,7 +143,8 @@ function displayResults() {
     $("results").html("<h3>FINISHED</h3>");
     $("#correct").html("Correct: " + correct);
     $("#incorrect").html("Incorrect: " + incorrect);
-    $("#unanswered").html("Unanswered: " + unanswered);
+    $("#unanswered").html("Unanswered: " + unanswered + "<br><br>");
+    displayChuck();
 }
 
 function keepScore() {
@@ -142,7 +155,6 @@ function keepScore() {
     var guess4 = $("input[name='a4']:checked").val();
     var guess5 = $("input[name='a5']:checked").val();
 
-    // first question
     if (!guess1) {
         unanswered++;
     }
@@ -153,8 +165,7 @@ function keepScore() {
         incorrect++;
     }
 
-
-    // second question
+    
     if (!guess2) {
         unanswered++;
     }
@@ -165,7 +176,7 @@ function keepScore() {
         incorrect++;
     }
 
-    // third question
+
     if (!guess3) {
         unanswered++;
     }
@@ -176,7 +187,7 @@ function keepScore() {
         incorrect++;
     }
 
-    // fourth question
+
     if (!guess4) {
         unanswered++;
     }
@@ -187,7 +198,7 @@ function keepScore() {
         incorrect++;
     }
 
-    // fifth question
+
     if (!guess5) {
         unanswered++;
     }
