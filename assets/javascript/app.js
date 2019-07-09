@@ -36,9 +36,10 @@ var trivQuest = [{
 $("#start").on("click", function() {
     $(this).hide();
     $("#chuckFacts").hide();
+    $("#chucksChoice").html("Try not to embarass yourself in front of Chuck!")
 
     // Display initial time countdown
-    $("#time-left").html("<h2>Time Remaining:<br> 30 <br>Seconds</h2>" + "<br>");
+    $("#time-left").html("<h2>Time Remaining: 30 Seconds</h2>" + "<br>");
 
     // Start timer countdown
     runTimer();
@@ -106,7 +107,7 @@ function decrement() {
     number--;
 
     //  Show the number in the #time tag
-    $("#time-left").html("<h2>Time Remaining:<br>" + number + "<br> Seconds</h2>" + "<br>");
+    $("#time-left").html("<h2>Time Remaining: " + number + " Seconds</h2>" + "<br>");
 
     if (number === 0) {
 
@@ -140,6 +141,7 @@ function displayChuck(){
 
 function displayResults() {
 
+    stop();
     $("#hideMe").hide();
     $("results").html("<h3>FINISHED</h3>");
     $("#correct").html("Correct: " + correct);
