@@ -39,3 +39,8 @@ input[type="radio"]{
       color: #ffffff;
       padding: 15px;
   }
+
+  span.red {
+    color: #800000;
+  
+  }
