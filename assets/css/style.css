@@ -18,10 +18,10 @@ section {
     border-style: ridge;
     border-width: 5px;
     margin: 0 auto;
+    margin-top: 3%;
     width: 60%;
     max-width: 60%;
-    min-height: 600px;
-    padding: 15px;
+    min-height: 640px;
     text-align: center;
 }
 
@@ -42,5 +42,5 @@ input[type="radio"]{
 
   span.red {
     color: #800000;
-  
+    font-family: 'Fira Mono', monospace;
   }

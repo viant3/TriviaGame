@@ -17,8 +17,8 @@ var chuckTrivia = [{
 },
 {
     question: "Who actually stopped the 1988 Christmas Eve terrorist attack on Nakatomi Plaza?",
-    choices: ["Sgt. Al Powell", "John McClane ", "Chuck Norris"],
-    answer: 2
+    choices: ["Chuck Norris", "Sgt. Al Powell", "John McClane "],
+    answer: 0
 },
 {
     question: "If you drove a car at the speed of light and turned on the headlights, what would you see?",
@@ -26,16 +26,15 @@ var chuckTrivia = [{
     answer: 2
 }];
 
-//start game and timer
+
 $("#start").on("click", function () {
     $(this).hide();
     $("#chuckFacts").hide();
     $("#chucksChoice").html("Try not to embarass yourself in front of Chuck!")
 
-    // Display initial time countdown
     $("#time-left").html("<h2>Time Remaining: <span class='red'>25</span> Seconds</h2>" + "<br>");
 
-    // Start timer countdown
+   
     runTimer();
 
 
@@ -70,7 +69,6 @@ $("#start").on("click", function () {
 
     $("#finished").html("<button id='finished' class='btn'>FINISHED</button>");
 
-    // Click event run keepScore() and displayResults() when user clicks finished 
     $("#finished").on("click", function () {
 
         keepScore();
@@ -79,7 +77,6 @@ $("#start").on("click", function () {
     });
 });
 
-// Timer countdown function
 function runTimer() {
 
     clearInterval(intervalId);
@@ -89,15 +86,12 @@ function runTimer() {
 
 function decrement() {
 
-    //  Decrease number by one.
+    
     number--;
-
-    //  Show the number in the #time tag
     $("#time-left").html("<h2>Time Remaining: <span class='red'>" + number + "</span> Seconds</h2>" + "<br>");
 
     if (number === 0) {
 
-        // runTimer stop function to stop timer countdown
         stop();
 
         keepScore();
@@ -108,7 +102,6 @@ function decrement() {
 
 function stop() {
 
-    //  Clears intervalId
     clearInterval(intervalId);
 }
 
@@ -129,7 +122,6 @@ function displayResults() {
 
     stop();
     $("#hideMe").hide();
-    $("results").html("<h3>FINISHED</h3>");
     $("#correct").html("Correct: " + correct);
     $("#incorrect").html("Incorrect: " + incorrect);
     $("#unanswered").html("Unanswered: " + unanswered + "<br><br>");
