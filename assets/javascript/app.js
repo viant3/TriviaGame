@@ -26,56 +26,57 @@ var chuckTrivia = [{
     answer: 2
 }];
 
+function getChucked() {
 
-$("#start").on("click", function () {
-    $(this).hide();
-    $("#chuckFacts").hide();
-    $("#chucksChoice").html("Try not to embarass yourself in front of Chuck!")
-
-    $("#time-left").html("<h2>Time Remaining: <span class='red'>25</span> Seconds</h2>" + "<br>");
-
-   
-    runTimer();
+    $("#start").on("click", function () {
+        $(this).hide();
+        $("#chuckFacts").hide();
+        $("#chucksChoice").html("Try not to embarass yourself in front of Chuck!")
+        $("#time-left").html("<h2>Time Remaining: <span class='red'>25</span> Seconds</h2>" + "<br>");
 
 
-    // Question 1
-    $("#q1").html("<h3>" + chuckTrivia[0].question + "</h3>");
-    $("#a1").html("<input type='radio' name='a1' value='0'>" + "<label>" + chuckTrivia[0].choices[0] + "</label>"
-        + "<input type='radio' name='a1' value='1'>" + "<label>" + chuckTrivia[0].choices[1] + "</label>"
-        + "<input type='radio' name='a1' value='2'>" + "<label>" + chuckTrivia[0].choices[2] + "</label>"
-    );
-
-    // Question 2
-    $("#q2").html("<h3>" + chuckTrivia[1].question + "</h3>");
-    $("#a2").html("<input type='radio' name='a2' value='0'>" + "<label>" + chuckTrivia[1].choices[0] + "</label>"
-        + "<input type='radio' name='a2' value='1'>" + "<label>" + chuckTrivia[1].choices[1] + "</label>"
-        + "<input type='radio' name='a2' value='2'>" + "<label>" + chuckTrivia[1].choices[2] + "</label>"
-    );
-
-    // Question 3
-    $("#q3").html("<h3>" + chuckTrivia[2].question + "</h3>");
-    $("#a3").html("<input type='radio' name='a3' value='0'>" + "<label>" + chuckTrivia[2].choices[0] + "</label>"
-        + "<input type='radio' name='a3' value='1'>" + "<label>" + chuckTrivia[2].choices[1] + "</label>"
-        + "<input type='radio' name='a3' value='2'>" + "<label>" + chuckTrivia[2].choices[2] + "</label>"
-    );
-
-    // Question 4
-    $("#q4").html("<h3>" + chuckTrivia[3].question + "</h3>");
-    $("#a4").html("<input type='radio' name='a4' value='0'>" + "<label>" + chuckTrivia[3].choices[0] + "</label>"
-        + "<input type='radio' name='a4' value='1'>" + "<label>" + chuckTrivia[3].choices[1] + "</label>"
-        + "<input type='radio' name='a4' value='2'>" + "<label>" + chuckTrivia[3].choices[2] + "</label>"
-    );
+        runTimer();
 
 
-    $("#finished").html("<button id='finished' class='btn'>FINISHED</button>");
+        // Question 1
+        $("#q1").html("<h3>" + chuckTrivia[0].question + "</h3>");
+        $("#a1").html("<input type='radio' name='a1' value='0'>" + "<label>" + chuckTrivia[0].choices[0] + "</label>"
+            + "<input type='radio' name='a1' value='1'>" + "<label>" + chuckTrivia[0].choices[1] + "</label>"
+            + "<input type='radio' name='a1' value='2'>" + "<label>" + chuckTrivia[0].choices[2] + "</label>"
+        );
 
-    $("#finished").on("click", function () {
+        // Question 2
+        $("#q2").html("<h3>" + chuckTrivia[1].question + "</h3>");
+        $("#a2").html("<input type='radio' name='a2' value='0'>" + "<label>" + chuckTrivia[1].choices[0] + "</label>"
+            + "<input type='radio' name='a2' value='1'>" + "<label>" + chuckTrivia[1].choices[1] + "</label>"
+            + "<input type='radio' name='a2' value='2'>" + "<label>" + chuckTrivia[1].choices[2] + "</label>"
+        );
 
-        keepScore();
-        displayResults();
+        // Question 3
+        $("#q3").html("<h3>" + chuckTrivia[2].question + "</h3>");
+        $("#a3").html("<input type='radio' name='a3' value='0'>" + "<label>" + chuckTrivia[2].choices[0] + "</label>"
+            + "<input type='radio' name='a3' value='1'>" + "<label>" + chuckTrivia[2].choices[1] + "</label>"
+            + "<input type='radio' name='a3' value='2'>" + "<label>" + chuckTrivia[2].choices[2] + "</label>"
+        );
 
+        // Question 4
+        $("#q4").html("<h3>" + chuckTrivia[3].question + "</h3>");
+        $("#a4").html("<input type='radio' name='a4' value='0'>" + "<label>" + chuckTrivia[3].choices[0] + "</label>"
+            + "<input type='radio' name='a4' value='1'>" + "<label>" + chuckTrivia[3].choices[1] + "</label>"
+            + "<input type='radio' name='a4' value='2'>" + "<label>" + chuckTrivia[3].choices[2] + "</label>"
+        );
+
+
+        $("#finished").html("<button id='finished' class='btn'>FINISHED</button>");
+
+        $("#finished").on("click", function () {
+
+            keepScore();
+            displayResults();
+
+        });
     });
-});
+}
 
 function runTimer() {
 
@@ -86,7 +87,6 @@ function runTimer() {
 
 function decrement() {
 
-    
     number--;
     $("#time-left").html("<h2>Time Remaining: <span class='red'>" + number + "</span> Seconds</h2>" + "<br>");
 
@@ -105,16 +105,19 @@ function stop() {
     clearInterval(intervalId);
 }
 
+
+
 function displayChuck() {
+
     if (correct >= 3) {
         $("#theMyth").html("<img src='assets/images/chuckApproves.gif'>");
         $("#chucksChoice").html("NICE JOB!");
+
     }
     else {
         $("#theMyth").html("<img src='assets/images/chucksMad.gif'>");
-        $("#chucksChoice").html("ARE YOU KIDDING?");
+        $("#chucksChoice").html("Disgraceful!");
     }
-
 }
 
 
@@ -127,6 +130,7 @@ function displayResults() {
     $("#unanswered").html("Unanswered: " + unanswered + "<br><br>");
     displayChuck();
 }
+
 
 function keepScore() {
 
@@ -177,5 +181,6 @@ function keepScore() {
     else {
         incorrect++;
     }
-
 }
+
+getChucked();

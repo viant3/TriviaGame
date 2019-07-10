@@ -17,6 +17,7 @@ section {
     background-color: #ffffff;
     border-style: ridge;
     border-width: 5px;
+    border-radius: 25px;
     margin: 0 auto;
     margin-top: 3%;
     width: 60%;
