@@ -22,13 +22,8 @@ var trivQuest = [{
     answer: 2
 },
 {
-    question: "q4",
-    choices: ["a1", "a2", "a3"],
-    answer: 1
-},
-{
-    question: "q5",
-    choices: ["a1", "a2", "a3"],
+    question: "If you drove a car at the speed of light and turned on the headlights, what would you see?",
+    choices: ["Darkness", "The light from the headlights would illuminate as usual.", "Chuck Norris"],
     answer: 2
 }];
 
@@ -72,14 +67,6 @@ $("#start").on("click", function() {
                 + "<input type='radio' name='a4' value='1'>" + "<label>" + trivQuest[3].choices[1] + "</label>"
                 + "<input type='radio' name='a4' value='2'>" + "<label>" + trivQuest[3].choices[2] + "</label>"
     );
-
-    // Question 5
-    $("#q5").html("<h3>" + trivQuest[4].question + "</h3>");
-    $("#a5").html("<input type='radio' name='a5' value='0'>" + "<label>" + trivQuest[4].choices[0] + "</label>"
-                + "<input type='radio' name='a5' value='1'>" + "<label>" + trivQuest[4].choices[1] + "</label>"
-                + "<input type='radio' name='a5' value='2'>" + "<label>" + trivQuest[4].choices[2] + "</label>"
-    );
-   
 
     
     $("#finished").html("<button id='finished' class='btn'>FINISHED</button>");
@@ -156,7 +143,6 @@ function keepScore() {
     var guess2 = $("input[name='a2']:checked").val();
     var guess3 = $("input[name='a3']:checked").val();
     var guess4 = $("input[name='a4']:checked").val();
-    var guess5 = $("input[name='a5']:checked").val();
 
     if (!guess1) {
         unanswered++;
@@ -196,17 +182,6 @@ function keepScore() {
     }
     else if (guess4 == trivQuest[3].answer) {
         correct++;
-    }
-    else {
-        incorrect++;
-    }
-
-
-    if (!guess5) {
-        unanswered++;
-    }
-    else if (guess5 == trivQuest[4].answer) {
-        correctAnswers++;
     }
     else {
         incorrect++;

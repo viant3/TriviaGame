@@ -5,9 +5,9 @@ body {
 
 h1 {
     color: #800000;
+    font-family: 'Press Start 2P', cursive;
     font-size: 2.5em;
-    font-weight: bolder;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 
@@ -16,7 +16,7 @@ h1 {
 section {
     background-color: #ffffff;
     border-style: ridge;
-    border-width: 2px;
+    border-width: 5px;
     margin: 0 auto;
     width: 60%;
     max-width: 60%;
@@ -31,4 +31,11 @@ section {
 
 input[type="radio"]{
     margin-left: 30px;
+  }
+
+  button {
+      border-radius: 50%;
+      background-color: #555555;
+      color: #ffffff;
+      padding: 15px;
   }
