@@ -6,7 +6,7 @@ var number = 25;
 var intervalId;
 
 var chuckTrivia = [{
-    question: "Which world leader \ famous actor helped bring about the fall of communism?",
+    question: "Which famous actor turned world leader helped bring about the fall of communism?",
     choices: ["Mikhail Gorbachev", "Ronald Reagan", "Chuck Norris"],
     answer: 2
 },

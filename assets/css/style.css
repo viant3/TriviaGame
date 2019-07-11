@@ -22,7 +22,7 @@ section {
     margin-top: 3%;
     width: 60%;
     max-width: 60%;
-    min-height: 640px;
+    min-height: 660px;
     text-align: center;
 }
 
@@ -42,7 +42,12 @@ input[type="radio"]{
       padding: 15px;
   }
 
+#start {
+      margin-top: 30px;
+  }
+
   span.red {
     color: #800000;
     font-family: 'Fira Mono', monospace;
   }
+
