@@ -76,13 +76,13 @@ function getChucked() {
 
         });
     });
-}
+};
 
 function runTimer() {
 
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
-}
+};
 
 
 function decrement() {
@@ -98,12 +98,12 @@ function decrement() {
         displayResults();
 
     }
-}
+};
 
 function stop() {
 
     clearInterval(intervalId);
-}
+};
 
 
 
@@ -118,7 +118,7 @@ function displayChuck() {
         $("#theMyth").html("<img src='assets/images/chucksMad.gif'>");
         $("#chucksChoice").html("Disgraceful!");
     }
-}
+};
 
 
 function displayResults() {
@@ -127,9 +127,13 @@ function displayResults() {
     $("#hideMe").hide();
     $("#correct").html("Correct: " + correct);
     $("#incorrect").html("Incorrect: " + incorrect);
-    $("#unanswered").html("Unanswered: " + unanswered + "<br><br>");
+    $("#unanswered").html("Unanswered: " + unanswered + "<br><br>")
     displayChuck();
-}
+    $("#reset").html("<button id='finished' class='btn'>TRY AGAIN</button>");
+    $("button").click(function(){
+        location.reload();
+    });
+};
 
 
 function keepScore() {
@@ -181,6 +185,6 @@ function keepScore() {
     else {
         incorrect++;
     }
-}
+};
 
 getChucked();
