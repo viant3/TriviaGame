@@ -51,3 +51,6 @@ input[type="radio"]{
     font-family: 'Fira Mono', monospace;
   }
 
+  #chuckFacts {
+      margin-top: 60px;
+  }
