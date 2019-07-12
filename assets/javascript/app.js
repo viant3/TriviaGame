@@ -2,7 +2,7 @@ var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
 
-var number = 25;
+var number = 45;
 var intervalId;
 
 var chuckTrivia = [{
@@ -32,7 +32,7 @@ function getChucked() {
         $(this).hide();
         $("#chuckFacts").hide();
         $("#chucksChoice").html("Try not to embarass yourself in front of Chuck!")
-        $("#time-left").html("<h2>Time Remaining: <span class='red'>25</span> Seconds</h2>" + "<br>");
+        $("#time-left").html("<h2>Time Remaining: <span class='red'>45</span> Seconds</h2>" + "<br>");
 
 
         runTimer();
