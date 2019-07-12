@@ -27,8 +27,9 @@ section {
 }
 
 #finished {
-    margin-top: 20px;
     padding: 10px;
+    width: 100px;
+    margin: 0 auto;
 }
 
 input[type="radio"]{
@@ -53,4 +54,8 @@ input[type="radio"]{
 
   #chuckFacts {
       margin-top: 60px;
+  }
+
+  #theMyth {
+      margin-bottom: 20px;
   }

@@ -125,9 +125,9 @@ function displayResults() {
 
     stop();
     $("#hideMe").hide();
-    $("#correct").html("Correct: " + correct);
-    $("#incorrect").html("Incorrect: " + incorrect);
-    $("#unanswered").html("Unanswered: " + unanswered + "<br><br>")
+    $("#correct").html("You answered " + correct + " correctly.");
+    $("#incorrect").html("You answered " + incorrect + " incorrectly.");
+    $("#unanswered").html("You left " + unanswered + " unanswered.<br><br>")
     displayChuck();
     $("#reset").html("<button id='finished' class='btn'>TRY AGAIN</button>");
     $("button").click(function(){
