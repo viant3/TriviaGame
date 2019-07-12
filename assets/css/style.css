@@ -10,7 +10,9 @@ h1 {
     padding-bottom: 10px;
 }
 
-
+label {
+    color: #800000;
+}
 
 
 section {
