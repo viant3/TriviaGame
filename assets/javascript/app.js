@@ -11,7 +11,7 @@ var chuckTrivia = [{
     answer: 2
 },
 {
-    question: "Who invented the Internet?",
+    question: "Who invented the World Wide Web?",
     choices: ["Tim Berners-Lee ", "Chuck Norris", "Al Gore"],
     answer: 1
 },
