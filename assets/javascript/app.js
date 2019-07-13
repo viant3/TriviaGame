@@ -130,7 +130,7 @@ function displayResults() {
     $("#unanswered").html("You left " + unanswered + " unanswered.<br><br>")
     displayChuck();
     $("#reset").html("<button id='finished' class='btn'>TRY AGAIN</button>");
-    $("button").click(function(){
+    $("button").click(function () {
         location.reload();
     });
 };
@@ -138,52 +138,26 @@ function displayResults() {
 
 function keepScore() {
 
+
     var guess1 = $("input[name='a1']:checked").val();
     var guess2 = $("input[name='a2']:checked").val();
     var guess3 = $("input[name='a3']:checked").val();
     var guess4 = $("input[name='a4']:checked").val();
 
-    if (!guess1) {
-        unanswered++;
-    }
-    else if (guess1 == chuckTrivia[0].answer) {
-        correct++;
-    }
-    else {
-        incorrect++;
-    }
+    var guessesArr = [guess1, guess2, guess3, guess4];
 
+    for (i = 0; i < guessesArr.length; i++) {
 
-    if (!guess2) {
-        unanswered++;
-    }
-    else if (guess2 == chuckTrivia[1].answer) {
-        correct++;
-    }
-    else {
-        incorrect++;
-    }
+        if (!guessesArr[i]) {
+            unanswered++;
+        }
+        else if (guessesArr[i] == chuckTrivia[i].answer) {
+            correct++;
+        }
+        else {
+            incorrect++;
+        }
 
-
-    if (!guess3) {
-        unanswered++;
-    }
-    else if (guess3 == chuckTrivia[2].answer) {
-        correct++;
-    }
-    else {
-        incorrect++;
-    }
-
-
-    if (!guess4) {
-        unanswered++;
-    }
-    else if (guess4 == chuckTrivia[3].answer) {
-        correct++;
-    }
-    else {
-        incorrect++;
     }
 };
 
