@@ -8,6 +8,7 @@ h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 2.5em;
     padding-bottom: 10px;
+    margin-top: 5%;
 }
 
 label {
@@ -23,7 +24,6 @@ section {
     margin: 0 auto;
     margin-top: 3%;
     width: 60%;
-    max-width: 60%;
     min-height: 660px;
     text-align: center;
 }
@@ -43,6 +43,7 @@ input[type="radio"]{
       background-color: #555555;
       color: #ffffff;
       padding: 15px;
+      cursor: pointer;
   }
 
 #start {
@@ -61,3 +62,20 @@ input[type="radio"]{
   #theMyth {
       margin-bottom: 20px;
   }
+
+  @media (min-width: 1px)
+    and  (max-width: 600px)  {
+
+        section {
+            background-color: #ffffff;
+            border-style: ridge;
+            border-width: 5px;
+            border-radius: 25px;
+            margin: 0 auto;
+            margin-top: 3%;
+            width: 100%;
+    
+            text-align: center;
+        }
+
+    }
