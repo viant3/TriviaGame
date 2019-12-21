@@ -26,7 +26,7 @@ var chuckTrivia = [{
     answer: 2
 }];
 
-function getChucked() {
+getChucked = () => {
 
     $("#start").on("click", function () {
         $(this).hide();
@@ -78,14 +78,13 @@ function getChucked() {
     });
 };
 
-function runTimer() {
+runTimer = () => {
 
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
 };
 
-
-function decrement() {
+decrement = () => {
 
     number--;
     $("#time-left").html("<h2>Time Remaining: <span class='red'>" + number + "</span> Seconds</h2>" + "<br>");
@@ -100,14 +99,14 @@ function decrement() {
     }
 };
 
-function stop() {
+stop = () => {
 
     clearInterval(intervalId);
 };
 
 
 
-function displayChuck() {
+displayChuck = () => {
 
     if (correct >= 3) {
         $("#theMyth").html("<img class='resizeChuck' src='assets/images/chuckApproves.gif'>");
@@ -121,7 +120,7 @@ function displayChuck() {
 };
 
 
-function displayResults() {
+displayResults = () => {
 
     stop();
     $("#hideMe").hide();
@@ -136,7 +135,7 @@ function displayResults() {
 };
 
 
-function keepScore() {
+keepScore = () => {
 
 
     var guess1 = $("input[name='a1']:checked").val();
