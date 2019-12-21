@@ -110,12 +110,12 @@ function stop() {
 function displayChuck() {
 
     if (correct >= 3) {
-        $("#theMyth").html("<img src='assets/images/chuckApproves.gif'>");
+        $("#theMyth").html("<img class='resizeChuck' src='assets/images/chuckApproves.gif'>");
         $("#chucksChoice").html("NICE JOB!");
 
     }
     else {
-        $("#theMyth").html("<img src='assets/images/chucksMad.gif'>");
+        $("#theMyth").html("<img class='resizeChuck' src='assets/images/chucksMad.gif'>");
         $("#chucksChoice").html("Disgraceful!");
     }
 };

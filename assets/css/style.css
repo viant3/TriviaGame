@@ -28,6 +28,10 @@ section {
     text-align: center;
 }
 
+.resizeChuck {
+    width: auto;
+}
+
 #finished {
     padding: 10px;
     width: 100px;
@@ -76,6 +80,10 @@ input[type="radio"]{
             width: 100%;
     
             text-align: center;
+        }
+
+        .resizeChuck {
+            width: 200px;
         }
 
     }
